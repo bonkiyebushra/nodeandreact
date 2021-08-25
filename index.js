@@ -9,9 +9,9 @@ require("./services/passport");
 
 mongoose.connect(keys.mongoURI, {
     useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-  });
+    maxPoolSize: 50, 
+    wtimeoutMS: 2500
+  })
 
 const app = express();
 
